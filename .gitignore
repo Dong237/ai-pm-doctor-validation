@@ -1,0 +1,23 @@
+node_modules/
+.next/
+.next-stale-*/
+out/
+dist/
+.vercel/
+.playwright-mcp/
+.claude/
+
+.env
+.env.*
+!.env.example
+
+.DS_Store
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Generated local screenshots and visual iteration debris.
+/*.png
+/commercial-*.md
