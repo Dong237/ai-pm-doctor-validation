@@ -6,6 +6,7 @@ dist/
 .vercel/
 .playwright-mcp/
 .claude/
+scratch/
 
 .env
 .env.*
