@@ -10,7 +10,7 @@ David is an AI PM coworker for indie builders.
 
 It turns messy ideas, market signals, and founder context into evidence-backed product judgment: the Bet, the riskiest assumption, the right decision, and the next PM action.
 
-> Current app status: this repo includes a working validation prototype. The landing page is only a middle test for paid/manual diagnosis demand, not the final product experience.
+> Current app status: this repo includes a working validation prototype. The page currently uses `IndiePM Clinic` / `AI PM Doctor` offer copy to test paid/manual diagnosis demand. That page is a market test, not the final David product experience or final naming decision.
 
 ## Why David Exists
 
@@ -72,13 +72,19 @@ The next action is N.
 
 David should never jump from raw idea to build spec. It should first understand the Bet, inspect evidence, and decide the right PM move.
 
+Terminology:
+
+- Bet: the product judgment unit, including user, problem, solution guess, evidence, risk, and next action.
+- Evidence Ledger: the traceable record of sources, claims, strength, recency, and relationship to a Bet.
+- Human-in-the-loop: manual review or delivery remains available for high-stakes diagnosis while the product is still validating judgment quality.
+
 ## Current Repository State
 
 This repository currently contains:
 
 - product source of truth in `docs/specs/`
 - frontend and validation-page design direction in `docs/frontend/`
-- backend notes in `docs/backend/`
+- backend and architecture notes in `docs/backend/`
 - market and platform research in `docs/research/`
 - a working Next.js validation prototype in `app/`
 - shared diagnosis/domain logic in `src/lib/`
@@ -91,8 +97,10 @@ The prototype can currently:
 - show a report page for generated previews
 - capture leads
 - capture paid diagnosis intent
-- optionally use Stripe payment links
-- optionally send events to a webhook sink
+- optionally return English Stripe payment links when configured
+- optionally send intake, diagnosis, lead, and paid-intent records to a webhook sink
+
+The prototype does not yet have durable storage, authentication, a real evidence-ingestion pipeline, or an LLM-backed PM reasoning engine. Reports and captured records use the current in-memory store and are lost when the process restarts.
 
 ## Product Maturity
 

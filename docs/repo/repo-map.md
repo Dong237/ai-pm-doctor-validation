@@ -78,7 +78,7 @@ Purpose: all Markdown knowledge lives under `docs/`.
 ## Cleanup Policy
 
 1. Keep runtime product code in `app/` and `src/`.
-2. Keep all Markdown knowledge under `docs/`, except root `README.md`.
+2. Keep all Markdown knowledge under `docs/`, except root `README.md` and `README.zh-CN.md`.
 3. Keep external reference files out of Git; extract useful claims into `docs/research/` or `docs/specs/`.
 4. Put future local experiments and screenshots under ignored `scratch/`.
 5. Replace `src/lib/store.ts` with durable storage before treating reports, leads, or payments as production data.
